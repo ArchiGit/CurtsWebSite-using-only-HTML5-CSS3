@@ -1,0 +1,198 @@
+body {
+  /* font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  all the above can be combined on one line below*/
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  /*dont want any padding or margin for the main body*/
+  padding:0;
+  margin: 0;
+  background-color: #f4f4f4;  /*light grey */
+}
+/*Global*/
+.container {
+  width:80%;        /*these first 2 lines center things with 10% on each side*/
+  margin:auto;
+  overflow:hidden  /*keeps things that fall outside of this hidden*/
+}
+ul {              /*global -this will apply to ALL uls*/
+  padding:0;
+  margin: 0;
+}
+.button_1 {
+  height: 28px;
+  background: coral;/*#e8491d*/
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+.dark {
+  padding: 15px;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/*Header*/
+header {
+  background:   #5534e9;   /*#35424a*/
+  color: #ffffff;          /*text color - white*/
+  padding-top: 30px;
+  min-height: 70px;       /*we want it to adjust - responsive*/
+  border-bottom: white 5px solid;
+}
+header a {
+  color:#ffffff;
+  text-decoration: none;    /*removes underline from links*/
+  text-transform: uppercase;
+  font-size: 16px;
+}
+header li {
+  float: left;              /*float allows text/inline to float around it*/
+  display: inline;
+  padding: 0 20px 0 20px    /*top, right, bottom, left*/
+}
+header #branding {
+  float: left;
+}
+header #branding h1 {
+  marign: 0px;
+}
+header nav {
+  float: right;
+  margin-top: 20px;           /*moves it down from the top a little*/
+}
+header .hightlight, header .current a {
+  color: coral;
+  font-weight: bold;
+}
+header a:hover {
+  color: #cccccc;       /*grey color*/
+}
+
+/*Showcase*/
+#showcase {
+  min-height: 400px;      /*to keep it responsive -we don't want a fixed height*/
+  background: url("../img/wallpaper3.jpg") 100%;  /*0 -400px moves just the image*/
+  background-size: 24000px 400px;  /*not good for responsive*/
+  text-align: center;
+  color: #ffffff;
+}
+#showcase h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+#showcase p {
+  font-size: 20px;
+}
+
+/*Newsletter*/
+#newsletter {
+  padding: 15px;
+  color: #ffffff;
+  background: #5534e9;   /*#35424a*/
+}
+#newsletter h1 {
+  margin-top: 15px;
+  float: left;
+}
+#newsletter form {
+  float: right;
+  margin-top: 15px;     /* moves form up */
+}
+#newsletter input[type="email"] {
+  padding: 4px;
+  min-height: 15px;
+  min-width: 275px;
+}
+
+/* Boxes */
+#boxes {
+  margin-top: 20px;   /*moves it down a little*/
+}
+#boxes .box {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align:  center;
+}
+#boxes .box img {
+  width: 90px;          /*height will be auto*/
+}
+#boxes .box a {
+  text-decoration: none;    /*removes underline from links*/
+}
+
+/*sidebar*/
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote select,
+aside#sidebar .quote textarea {
+  width: 90%;
+}
+
+/*Main Col -Column*/
+article#main-col {
+  float: left;
+  width: 65%;
+}
+
+/*Services*/
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #cccccc;
+  margin-bottom: 5px;
+  background: #e6e6e6;
+}
+
+/*Footer*/
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color:#ffffff;
+  background-color: #5534e9;
+  text-align:center;
+}
+
+/*Media Queries -- used to make it look good on a mobile device*/
+/*Tablet Devices usually are around 786 pixels*/
+@media(max-width: 768px) {
+  /*body {    display:none;  } /*use this line to check -- if shrunk to less than 768 it disapears*/
+  /* big part of this is removing float when it gets this small*/
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%
+  }
+  header {
+    padding: 20px;
+  }
+  #showcase h1 {
+    margin-top: 40px;   /*too much room on top when shrunk down*/
+  }
+  #newsletter button, .quote button  {
+    display: block;
+    width: 100%;
+  }
+  #newsletter form input[type="email"], .quote input, .quote textarea {
+      width: 100%;
+      margin-bottom: 5px;
+  }
+}

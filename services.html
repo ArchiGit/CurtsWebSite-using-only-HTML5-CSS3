@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=""net="width=device-width">
+    <meta name="description" content="Example for Web Site Creation">
+    <meta name="keywords" content="Personal, Web Design, resume">
+    <meta name="author" content="Curtis Archibald">
+    <title>Curts Web Page | Services</title>
+    <link rel="stylesheet" href="./CSS/cda_style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="hightlight">Curtis</span> Archibald</h1>
+        </div>
+        <div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li class="current"><a href="services.html">Services</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Practice Subscribe To :</h1>
+        <form class="" action="doThisWithData.php" method="post">
+          <input type="email" placeholder="No Newsletter yet...">
+          <button type="submit" class="button_1">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">Services</h1>
+          <ul id="services">
+            <li>
+              <h3>Service 1 -Website Design</h3>
+              <p>This is just a placeholder for now. This is just a placeholder for now. This is just a placeholder for now.  </p>
+              <p>Pricing:  Pricing:  $1,000 - $3,000 </p>
+            </li>
+            <li>
+              <h3>Web Site Maintenance 2</h3>
+              <p>This is just a placeholder for now. This is just a placeholder for now. This is just a placeholder for now. </p>
+              <p>Pricing:  $250/Month </p>
+            </li>
+            <li>
+              <h3>Hosting </h3>
+              <p>This is just a placeholder for now. This is just a placeholder for now. This is just a placeholder for now. </p>
+              <p>Pricing:  $25 / month </p>
+            </li>
+
+          </ul>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>Get a Quote</h3>
+
+            <form class="quote" action="doThisWithData.php" method="post">
+              <div>
+        				<label>Name</label> <br>
+        				<input type="text" name="Name">
+        			</div>
+        			<div>
+        				<label>Email</label>
+        				<input type="email" name="Email Address">
+        			</div>
+              <div>
+                <label>Service</label>
+                <select name="serviceType">
+                  <option value="Service1">Design</option>
+                  <option value="Service2">Maintenance</option>
+                  <option value="Service3">Hosting</option>
+                </select>
+              </div>
+        			<div>
+        				<label>Message</label>
+        				<textarea name="Message"></textarea>
+        			</div>
+              <button type="submit" class="button_1">Send</button>
+            </form>
+
+          </aside>
+          </div>
+
+      </div>
+    </section>
+    <footer>
+      <p>Curts Web Design, Copyright &copy 2018</p>
+    </footer>
+  </body>
+</html>
